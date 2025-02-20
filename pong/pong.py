@@ -66,7 +66,7 @@ players = []
 players.append(player)
 players.append(player2)
 
-ball = Entity(model="sphere", z=-1, scale=(0.2,0.2,0.2), position=(0,0,0),collider="sphere")
+ball = Entity(model="sphere", z=-1, scale=(0.2,0.2,0.2), position=(0,0,0),collider="box")
 
 score_player1 = Text("0", scale=(3.5, 3.7, 0), z=-1, position=(0.75, 0.05, 0))
 score_player2 = Text("0", scale=(3.5, 3.7, 0), z=-1, position=(-0.8, 0.05, 0))
