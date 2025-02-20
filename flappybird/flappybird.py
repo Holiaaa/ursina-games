@@ -36,6 +36,7 @@ def update():
     score_info = player.intersects(invisible)
     if score_info.hit and not score_incremented:
         score_incremented = True
+        score_sound.play()
         score.text = str(int(score.text)+1)
     
     if not score_info.hit:
@@ -58,7 +59,9 @@ pipe2 = duplicate(pipe)
 pipe2.position = (10, 5, 0)
 
 jump_sound = Audio('jump.ogg', autoplay=False)
+jump_sound.volume = 0.3
 gameover_sound = Audio('gameover.ogg', autoplay=False)
+score_sound = Audio('score.ogg', autoplay=False)
 
 score = Text("0", position=(0,0.4,0), scale=(2,2,2))
 text_display = False
