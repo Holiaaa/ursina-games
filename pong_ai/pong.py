@@ -15,7 +15,6 @@ def update():
     if abs(ball.x) > 6.3:
         score_sound.play()
         ai_error = random.uniform(0.2, 1)
-        print(ai_error)
 
         if ball.x > 0:
             score_player2.text = str(int(score_player2.text) + 1)
